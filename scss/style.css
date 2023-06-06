@@ -15,6 +15,11 @@ body header {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 320px) {
+  body header {
+    height: 400px;
+  }
+}
 body header .titleWithImg {
   width: 50%;
   height: 100%;
@@ -23,6 +28,13 @@ body header .titleWithImg {
   gap: 20px;
   padding-top: 20px;
 }
+@media (max-width: 320px) {
+  body header .titleWithImg {
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+  }
+}
 body header .title {
   width: 50%;
   height: 100%;
@@ -30,6 +42,12 @@ body header .title {
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+}
+@media (max-width: 320px) {
+  body header .title {
+    width: 100%;
+    text-align: center;
+  }
 }
 body header img {
   width: 150px;
@@ -45,6 +63,12 @@ body section {
   gap: 15px;
   padding: 20px 0 20px 0;
 }
+@media (max-width: 320px) {
+  body section {
+    flex-direction: column;
+    padding: 10px;
+  }
+}
 body section .card {
   width: 20%;
   height: 500px;
@@ -57,6 +81,11 @@ body section .card {
   padding: 10px;
   gap: 10px;
   transition: all 0.5s ease-in-out;
+}
+@media (max-width: 320px) {
+  body section .card {
+    width: 100%;
+  }
 }
 body section .card:hover {
   transform: scale(1.1);

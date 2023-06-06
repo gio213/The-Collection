@@ -5,8 +5,11 @@
 }
 
 body {
+
     font-family: monospace;
     background-color: #dcd9d9;
+
+
 
     header {
         width: 100%;
@@ -15,6 +18,12 @@ body {
         justify-content: center;
         align-items: center;
 
+        @media (max-width: 320px) {
+            height: 400px;
+        }
+
+
+
         .titleWithImg {
             width: 50%;
             height: 100%;
@@ -22,6 +31,13 @@ body {
             align-items: center;
             gap: 20px;
             padding-top: 20px;
+
+            @media (max-width: 320px) {
+                width: 100%;
+                flex-direction: column;
+                padding: 10px;
+
+            }
 
 
 
@@ -33,7 +49,13 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            gap: 10px
+            gap: 10px;
+
+            @media (max-width: 320px) {
+                width: 100%;
+                text-align: center;
+            }
+
         }
 
         img {
@@ -57,6 +79,12 @@ body {
         gap: 15px;
         padding: 20px 0 20px 0;
 
+        @media (max-width: 320px) {
+
+            flex-direction: column;
+            padding: 10px;
+        }
+
 
         .card {
             width: 20%;
@@ -70,6 +98,12 @@ body {
             padding: 10px;
             gap: 10px;
             transition: all 0.5s ease-in-out;
+
+            @media (max-width: 320px) {
+                width: 100%;
+
+
+            }
 
 
             &:hover {
