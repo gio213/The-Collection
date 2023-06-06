@@ -20,6 +20,11 @@ body header {
     height: 400px;
   }
 }
+@media (max-width: 425px) {
+  body header {
+    height: 350px;
+  }
+}
 body header .titleWithImg {
   width: 50%;
   height: 100%;
@@ -35,6 +40,13 @@ body header .titleWithImg {
     padding: 10px;
   }
 }
+@media (max-width: 425px) {
+  body header .titleWithImg {
+    width: 100%;
+    flex-direction: column;
+    padding: 10px;
+  }
+}
 body header .title {
   width: 50%;
   height: 100%;
@@ -44,6 +56,12 @@ body header .title {
   gap: 10px;
 }
 @media (max-width: 320px) {
+  body header .title {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 425px) {
   body header .title {
     width: 100%;
     text-align: center;
@@ -69,6 +87,13 @@ body section {
     padding: 10px;
   }
 }
+@media (max-width: 425px) {
+  body section {
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+  }
+}
 body section .card {
   width: 20%;
   height: 500px;
@@ -85,6 +110,11 @@ body section .card {
 @media (max-width: 320px) {
   body section .card {
     width: 100%;
+  }
+}
+@media (max-width: 425px) {
+  body section .card {
+    width: 80%;
   }
 }
 body section .card:hover {
