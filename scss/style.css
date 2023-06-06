@@ -29,6 +29,7 @@ body header .title {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 10px;
 }
 body header img {
   width: 150px;
