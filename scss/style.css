@@ -8,6 +8,7 @@ body {
   font-family: monospace;
   background-color: #dcd9d9;
 }
+
 body header {
   width: 100%;
   height: 200px;
@@ -15,14 +16,10 @@ body header {
   justify-content: center;
   align-items: center;
 }
+
 @media (max-width: 320px) {
   body header {
     height: 400px;
-  }
-}
-@media (max-width: 425px) {
-  body header {
-    height: 350px;
   }
 }
 body header .titleWithImg {
@@ -33,14 +30,8 @@ body header .titleWithImg {
   gap: 20px;
   padding-top: 20px;
 }
+
 @media (max-width: 320px) {
-  body header .titleWithImg {
-    width: 100%;
-    flex-direction: column;
-    padding: 10px;
-  }
-}
-@media (max-width: 425px) {
   body header .titleWithImg {
     width: 100%;
     flex-direction: column;
@@ -55,13 +46,8 @@ body header .title {
   justify-content: center;
   gap: 10px;
 }
+
 @media (max-width: 320px) {
-  body header .title {
-    width: 100%;
-    text-align: center;
-  }
-}
-@media (max-width: 425px) {
   body header .title {
     width: 100%;
     text-align: center;
@@ -73,6 +59,7 @@ body header img {
   border-radius: 50%;
   border: 5px solid #fff;
 }
+
 body section {
   width: 100%;
   display: flex;
@@ -81,17 +68,11 @@ body section {
   gap: 15px;
   padding: 20px 0 20px 0;
 }
+
 @media (max-width: 320px) {
   body section {
     flex-direction: column;
     padding: 10px;
-  }
-}
-@media (max-width: 425px) {
-  body section {
-    flex-direction: column;
-    padding: 10px;
-    align-items: center;
   }
 }
 body section .card {
@@ -107,19 +88,16 @@ body section .card {
   gap: 10px;
   transition: all 0.5s ease-in-out;
 }
+
 @media (max-width: 320px) {
   body section .card {
     width: 100%;
   }
 }
-@media (max-width: 425px) {
-  body section .card {
-    width: 80%;
-  }
-}
 body section .card:hover {
   transform: scale(1.1);
 }
+
 body section .card .cardImg {
   width: 100%;
   height: 200px;
@@ -128,11 +106,13 @@ body section .card .cardImg {
   background-repeat: no-repeat;
   background-color: #9e9c9c;
 }
+
 body section .card .cardImg img {
   width: 100%;
   height: 100%;
   border-radius: 5px 5px 0 0;
 }
+
 body section .card .genre {
   width: 100%;
   height: 40px;
@@ -140,6 +120,7 @@ body section .card .genre {
   justify-content: flex-start;
   gap: 5px;
 }
+
 body section .card .genre .p1 {
   width: 40%;
   height: 100%;
@@ -151,6 +132,7 @@ body section .card .genre .p1 {
   text-align: center;
   font-weight: bold;
 }
+
 body section .card .genre .p2 {
   width: 40%;
   height: 100%;
@@ -162,6 +144,7 @@ body section .card .genre .p2 {
   text-align: center;
   font-weight: bold;
 }
+
 body section .card .movieTittle {
   width: 100%;
   height: 50px;
@@ -170,15 +153,18 @@ body section .card .movieTittle {
   justify-content: space-between;
   align-items: flex-start;
 }
+
 body section .card .movieTittle h2 {
   font-size: medium;
   opacity: 0.5;
 }
+
 body section .card .line {
   width: 100%;
   height: 1px;
   background-color: #000;
 }
+
 body section .card .youtubeSpotifyDiv {
   width: 100%;
   height: 50px;
@@ -187,9 +173,13 @@ body section .card .youtubeSpotifyDiv {
   align-items: center;
   gap: 5px;
 }
+
 body section .card .youtubeSpotifyDiv .youtube {
   cursor: pointer;
 }
+
 body section .card .youtubeSpotifyDiv .spotify {
   cursor: pointer;
-}/*# sourceMappingURL=style.css.map */
+}
+
+/*# sourceMappingURL=style.css.map */
