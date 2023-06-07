@@ -1,4 +1,21 @@
 const body = document.querySelector("body");
+const search = document.querySelector(".searchInput");
+const section = document.querySelector("section");
+const themeSwitcher = document.querySelector(".themeSwitcher");
+const themeSwitchBtn = document.getElementById("themeChanger");
+const themeName = document.querySelector(".colorChangeBtnTxt h1");
+const setTheme = (theme) => (document.documentElement.className = theme);
+themeSwitchBtn.addEventListener("change", function () {
+  if (themeSwitchBtn.checked) {
+    setTheme("dark");
+    themeName.innerHTML = "Dark";
+  } else {
+    setTheme("light");
+    themeName.innerHTML = "Light";
+    return themeSwitchBtn;
+  }
+});
+
 const collection = [
   {
     name: "Pulp Fiction",
@@ -92,6 +109,7 @@ const createCard = (number) => {
   movieTittleDiv.setAttribute("class", "movieTittle");
   card.appendChild(movieTittleDiv);
   const movieTittle = document.createElement("h1");
+
   movieTittleDiv.appendChild(movieTittle);
   const movieDirectorDiv = document.createElement("h2");
   movieTittleDiv.appendChild(movieDirectorDiv);
@@ -107,11 +125,13 @@ const createCard = (number) => {
   youtubeSpotifyDiv.setAttribute("class", "youtubeSpotify");
   card.appendChild(youtubeSpotifyDiv);
   const youtubeIcon = document.createElement("img");
-  youtubeIcon.src = "/imgs/youtube-cion.png";
+  youtubeIcon.setAttribute("class", "youtubeIcon");
+  youtubeIcon.src = "/imgs/youtube-icon.png";
   youtubeSpotifyDiv.appendChild(youtubeIcon);
   const spotifyIcon = document.createElement("img");
   spotifyIcon.setAttribute("class", "spotifyIcon");
-  spotifyIcon.src = "/imgs/spotify-cion.png";
+
+  spotifyIcon.src = "/imgs/spotify-icon.png";
   youtubeSpotifyDiv.appendChild(spotifyIcon);
   youtubeIcon.addEventListener("click", () => {
     window.open(collection[number].youtubeLink);
@@ -127,6 +147,38 @@ const createCard = (number) => {
   movieDirectorDiv.innerHTML = collection[number].director;
   cardTxt.innerHTML = `Relase year: ${collection[number].releaseYear} <br> Cast: ${collection[number].cast}`;
 };
+
+search.addEventListener("keyup", (e) => {
+  const searchString = e.target.value.toLowerCase();
+  const filteredMovies = collection.filter((movie) => {
+    return (
+      movie.name.toLowerCase().includes(searchString) ||
+      movie.genre[0].toLowerCase().includes(searchString) ||
+      movie.genre[1].toLowerCase().includes(searchString) ||
+      movie.director.toLowerCase().includes(searchString) ||
+      movie.cast[0].toLowerCase().includes(searchString) ||
+      movie.cast[1].toLowerCase().includes(searchString) ||
+      movie.cast[2].toLowerCase().includes(searchString) ||
+      movie.cast[3].toLowerCase().includes(searchString)
+    );
+  });
+  section.innerHTML = "";
+  filteredMovies.forEach((movie) => {
+    createCard(collection.indexOf(movie));
+
+    if (searchString === "") {
+      section.innerHTML = "";
+      createCard(0);
+      createCard(1);
+      createCard(2);
+      createCard(3);
+      createCard(4);
+      createCard(1);
+      createCard(3);
+      createCard(4);
+    }
+  });
+});
 
 createCard(0);
 createCard(1);

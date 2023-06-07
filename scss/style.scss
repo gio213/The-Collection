@@ -4,9 +4,86 @@
     box-sizing: border-box;
 }
 
+:root,
+:root.light {
+    --bgColor: #c3cfe2;
+    --cardColor: #e0e5ec;
+    --h1Color: #1E2A47;
+    --youTubeColor: #e0e5ec;
+    --spotifiyColor: ##c3cfe2;
+
+}
+
+:root.dark {
+    --bgColor: #1E2A47;
+    --cardColor: #2A3E5A;
+    --h1Color: #fff;
+    --youTubeColor: #FF0000;
+    --spotifiyColor: #1DB954;
+
+}
+
+#themeChanger {
+    appearance: none;
+    background: url("../imgs/icon-sun.svg");
+    width: 20px;
+    height: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#themeChanger:checked {
+    background: url("../imgs/icon-moon.svg");
+}
+
+
+
 body {
     font-family: monospace;
-    background-color: #dcd9d9;
+    background-color: var(--bgColor);
+
+    h1 {
+        color: var(--h1Color);
+    }
+
+    p {
+        color: var(--h1Color);
+    }
+
+    h2 {
+        color: var(--h1Color);
+    }
+}
+
+
+
+body .inputDiv {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    input {
+        width: 200px;
+
+        border: none;
+        border-radius: 20px;
+        padding-left: 10px;
+        font-weight: bold;
+    }
+
+
+    button {
+        width: 100px;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 20px;
+        background-color: #FFDD57;
+
+
+    }
 }
 
 body header {
@@ -15,7 +92,18 @@ body header {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .colorChangeBtnTxt {
+        width: 10%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        gap: 10%;
+        font-size: 10px;
+    }
 }
+
+
 
 @media (max-width: 320px) {
     body header {
@@ -52,6 +140,10 @@ body header .title {
     flex-direction: column;
     justify-content: center;
     gap: 10px;
+
+    h1 {
+        color: var(--h1Color)
+    }
 }
 
 @media (max-width: 320px) {
@@ -61,13 +153,29 @@ body header .title {
     }
 }
 
+body header .posterImgDiv {
+    width: 190px;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: all 0.5s ease-in-out;
 
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
 
 body header img {
-    width: 150px;
-    height: 150px;
+
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
-    border: 5px solid #fff;
+
+
 }
 
 body section {
@@ -94,7 +202,7 @@ body section .card {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #fff;
+    background-color: var(--cardColor);
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     padding: 10px;
@@ -111,7 +219,7 @@ body section .card {
 
 
 body section .card:hover {
-    transform: scale(1.1);
+    transform: scale(0.9);
 }
 
 body section .card .cardImg {
@@ -190,12 +298,16 @@ body section .card .youtubeSpotifyDiv {
     gap: 5px;
 }
 
-body section .card .youtubeSpotifyDiv .youtube {
+body section .card .youtubeSpotify .youtubeIcon {
     cursor: pointer;
+    background-color: var(--youTubeColor);
+    border-radius: 50%;
 }
 
-body section .card .youtubeSpotifyDiv .spotify {
+body section .card .youtubeSpotify .spotifyIcon {
     cursor: pointer;
+    background-color: var(--spotifiyColor);
+    border-radius: 50%;
 }
 
 /*# sourceMappingURL=style.css.map */
