@@ -126,9 +126,9 @@ const createCard = (number) => {
   card.appendChild(youtubeSpotifyDiv);
   const youtubeIcon = document.createElement("img");
   youtubeIcon.setAttribute("class", "youtubeIcon");
-  youtubeIcon.src = "https://github.com/gio213/The-Collection/blob/main/imgs/youtube-icon.png";
+  youtubeIcon.src = "imgs/youtube-icon.png";
   youtubeSpotifyDiv.appendChild(youtubeIcon);
-  const spotifyIcon = document.createElement("img");
+  const spotifyIcon = document.createElement("img"); 
   spotifyIcon.setAttribute("class", "spotifyIcon");
 
   spotifyIcon.src = "/imgs/spotify-icon.png";
