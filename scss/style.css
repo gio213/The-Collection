@@ -49,7 +49,6 @@ body p {
 body h2 {
   color: var(--h1Color);
 }
-
 body .inputDiv {
   width: 100%;
   height: 30px;
@@ -57,22 +56,13 @@ body .inputDiv {
   justify-content: center;
   gap: 10px;
 }
-body .inputDiv input {
+body .inputDiv .searchInput {
   width: 200px;
   border: none;
   border-radius: 20px;
+  font-weight: bold;
   padding-left: 10px;
-  font-weight: bold;
 }
-body .inputDiv button {
-  width: 100px;
-  border: none;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 20px;
-  background-color: #FFDD57;
-}
-
 body header {
   width: 100%;
   height: 200px;
@@ -88,12 +78,6 @@ body header .colorChangeBtnTxt {
   gap: 10%;
   font-size: 10px;
 }
-
-@media (max-width: 320px) {
-  body header {
-    height: 400px;
-  }
-}
 body header .titleWithImg {
   width: 50%;
   height: 100%;
@@ -101,14 +85,6 @@ body header .titleWithImg {
   align-items: center;
   gap: 20px;
   padding-top: 20px;
-}
-
-@media (max-width: 320px) {
-  body header .titleWithImg {
-    width: 100%;
-    flex-direction: column;
-    padding: 10px;
-  }
 }
 body header .title {
   width: 50%;
@@ -120,13 +96,6 @@ body header .title {
 }
 body header .title h1 {
   color: var(--h1Color);
-}
-
-@media (max-width: 320px) {
-  body header .title {
-    width: 100%;
-    text-align: center;
-  }
 }
 body header .posterImgDiv {
   width: 190px;
@@ -141,13 +110,11 @@ body header .posterImgDiv {
 body header .posterImgDiv:hover {
   transform: scale(1.1);
 }
-
 body header img {
   width: 100%;
   height: 100%;
   border-radius: 50%;
 }
-
 body section {
   width: 100%;
   display: flex;
@@ -155,13 +122,6 @@ body section {
   justify-content: center;
   gap: 15px;
   padding: 20px 0 20px 0;
-}
-
-@media (max-width: 320px) {
-  body section {
-    flex-direction: column;
-    padding: 10px;
-  }
 }
 body section .card {
   width: 20%;
@@ -176,16 +136,9 @@ body section .card {
   gap: 10px;
   transition: all 0.5s ease-in-out;
 }
-
-@media (max-width: 320px) {
-  body section .card {
-    width: 100%;
-  }
-}
 body section .card:hover {
   transform: scale(0.9);
 }
-
 body section .card .cardImg {
   width: 100%;
   height: 200px;
@@ -194,13 +147,11 @@ body section .card .cardImg {
   background-repeat: no-repeat;
   background-color: #9e9c9c;
 }
-
 body section .card .cardImg img {
   width: 100%;
   height: 100%;
   border-radius: 5px 5px 0 0;
 }
-
 body section .card .genre {
   width: 100%;
   height: 40px;
@@ -208,7 +159,6 @@ body section .card .genre {
   justify-content: flex-start;
   gap: 5px;
 }
-
 body section .card .genre .p1 {
   width: 40%;
   height: 100%;
@@ -220,7 +170,6 @@ body section .card .genre .p1 {
   text-align: center;
   font-weight: bold;
 }
-
 body section .card .genre .p2 {
   width: 40%;
   height: 100%;
@@ -232,7 +181,6 @@ body section .card .genre .p2 {
   text-align: center;
   font-weight: bold;
 }
-
 body section .card .movieTittle {
   width: 100%;
   height: 50px;
@@ -241,18 +189,15 @@ body section .card .movieTittle {
   justify-content: space-between;
   align-items: flex-start;
 }
-
 body section .card .movieTittle h2 {
   font-size: medium;
   opacity: 0.5;
 }
-
 body section .card .line {
   width: 100%;
   height: 1px;
   background-color: #000;
 }
-
 body section .card .youtubeSpotifyDiv {
   width: 100%;
   height: 50px;
@@ -261,17 +206,13 @@ body section .card .youtubeSpotifyDiv {
   align-items: center;
   gap: 5px;
 }
-
-body section .card .youtubeSpotify .youtubeIcon {
+body section .card .youtubeSpotifyDiv .youtubeIcon {
   cursor: pointer;
   background-color: var(--youTubeColor);
   border-radius: 50%;
 }
-
-body section .card .youtubeSpotify .spotifyIcon {
+body section .card .youtubeSpotifyDiv .spotifyIcon {
   cursor: pointer;
   background-color: var(--spotifiyColor);
   border-radius: 50%;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

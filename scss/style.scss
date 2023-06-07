@@ -36,8 +36,6 @@
     background: url("../imgs/icon-moon.svg");
 }
 
-
-
 body {
     font-family: monospace;
     background-color: var(--bgColor);
@@ -53,261 +51,203 @@ body {
     h2 {
         color: var(--h1Color);
     }
-}
 
-
-
-body .inputDiv {
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-
-    input {
-        width: 200px;
-
-        border: none;
-        border-radius: 20px;
-        padding-left: 10px;
-        font-weight: bold;
-    }
-
-
-    button {
-        width: 100px;
-        border: none;
-        font-weight: bold;
-        cursor: pointer;
-        border-radius: 20px;
-        background-color: #FFDD57;
-
-
-    }
-}
-
-body header {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    .colorChangeBtnTxt {
-        width: 10%;
+    .inputDiv {
+        width: 100%;
+        height: 30px;
         display: flex;
-        justify-content: flex-end;
+        justify-content: center;
+
+        gap: 10px;
+
+        .searchInput {
+            width: 200px;
+            border: none;
+            border-radius: 20px;
+            font-weight: bold;
+            padding-left: 10px;
+        }
+    }
+
+    header {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
         align-items: center;
-        gap: 10%;
-        font-size: 10px;
+
+
+
+        .colorChangeBtnTxt {
+            width: 10%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10%;
+            font-size: 10px;
+        }
+
+        .titleWithImg {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding-top: 20px;
+        }
+
+        .title {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 10px;
+
+            h1 {
+                color: var(--h1Color)
+            }
+        }
+
+        .posterImgDiv {
+            width: 190px;
+            height: 180px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            border: 2px solid #fff;
+            transition: all 0.5s ease-in-out;
+
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+
+
+
+
     }
-}
 
-
-
-@media (max-width: 320px) {
-    body header {
-        height: 400px;
-    }
-}
-
-
-
-
-body header .titleWithImg {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    padding-top: 20px;
-}
-
-@media (max-width: 320px) {
-    body header .titleWithImg {
+    section {
         width: 100%;
-        flex-direction: column;
-        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 20px 0 20px 0;
+
+        .card {
+            width: 20%;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            background-color: var(--cardColor);
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+            border-radius: 5px;
+            padding: 10px;
+            gap: 10px;
+            transition: all 0.5s ease-in-out;
+
+            &:hover {
+                transform: scale(0.9);
+            }
+
+            .cardImg {
+                width: 100%;
+                height: 200px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-color: #9e9c9c;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    border-radius: 5px 5px 0 0;
+                }
+            }
+
+            .genre {
+                width: 100%;
+                height: 40px;
+                display: flex;
+                justify-content: flex-start;
+                gap: 5px;
+
+                .p1 {
+                    width: 40%;
+                    height: 100%;
+                    background-color: #FFDD57;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 20px;
+                    text-align: center;
+                    font-weight: bold;
+                }
+
+                .p2 {
+                    width: 40%;
+                    height: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: #57C3FF;
+                    border-radius: 20px;
+                    text-align: center;
+                    font-weight: bold;
+                }
+            }
+
+            .movieTittle {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                h2 {
+                    font-size: medium;
+                    opacity: 0.5;
+                }
+            }
+
+            .line {
+                width: 100%;
+                height: 1px;
+                background-color: #000;
+            }
+
+            .youtubeSpotifyDiv {
+                width: 100%;
+                height: 50px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 5px;
+
+                .youtubeIcon {
+                    cursor: pointer;
+                    background-color: var(--youTubeColor);
+                    border-radius: 50%;
+                }
+
+                .spotifyIcon {
+                    cursor: pointer;
+                    background-color: var(--spotifiyColor);
+                    border-radius: 50%;
+                }
+            }
+        }
     }
 }
-
-
-
-body header .title {
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 10px;
-
-    h1 {
-        color: var(--h1Color)
-    }
-}
-
-@media (max-width: 320px) {
-    body header .title {
-        width: 100%;
-        text-align: center;
-    }
-}
-
-body header .posterImgDiv {
-    width: 190px;
-    height: 180px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    border: 2px solid #fff;
-    transition: all 0.5s ease-in-out;
-
-
-    &:hover {
-        transform: scale(1.1);
-    }
-}
-
-body header img {
-
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-
-
-}
-
-body section {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    padding: 20px 0 20px 0;
-}
-
-@media (max-width: 320px) {
-    body section {
-        flex-direction: column;
-        padding: 10px;
-    }
-}
-
-
-
-body section .card {
-    width: 20%;
-    height: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: var(--cardColor);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding: 10px;
-    gap: 10px;
-    transition: all 0.5s ease-in-out;
-}
-
-@media (max-width: 320px) {
-    body section .card {
-        width: 100%;
-    }
-}
-
-
-
-body section .card:hover {
-    transform: scale(0.9);
-}
-
-body section .card .cardImg {
-    width: 100%;
-    height: 200px;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #9e9c9c;
-}
-
-body section .card .cardImg img {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px 5px 0 0;
-}
-
-body section .card .genre {
-    width: 100%;
-    height: 40px;
-    display: flex;
-    justify-content: flex-start;
-    gap: 5px;
-}
-
-body section .card .genre .p1 {
-    width: 40%;
-    height: 100%;
-    background-color: #FFDD57;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-
-body section .card .genre .p2 {
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #57C3FF;
-    border-radius: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-
-body section .card .movieTittle {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-}
-
-body section .card .movieTittle h2 {
-    font-size: medium;
-    opacity: 0.5;
-}
-
-body section .card .line {
-    width: 100%;
-    height: 1px;
-    background-color: #000;
-}
-
-body section .card .youtubeSpotifyDiv {
-    width: 100%;
-    height: 50px;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 5px;
-}
-
-body section .card .youtubeSpotify .youtubeIcon {
-    cursor: pointer;
-    background-color: var(--youTubeColor);
-    border-radius: 50%;
-}
-
-body section .card .youtubeSpotify .spotifyIcon {
-    cursor: pointer;
-    background-color: var(--spotifiyColor);
-    border-radius: 50%;
-}
-
-/*# sourceMappingURL=style.css.map */

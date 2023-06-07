@@ -122,7 +122,7 @@ const createCard = (number) => {
   line.setAttribute("class", "line");
   card.appendChild(line);
   const youtubeSpotifyDiv = document.createElement("div");
-  youtubeSpotifyDiv.setAttribute("class", "youtubeSpotify");
+  youtubeSpotifyDiv.setAttribute("class", "youtubeSpotifyDiv");
   card.appendChild(youtubeSpotifyDiv);
   const youtubeIcon = document.createElement("img");
   youtubeIcon.setAttribute("class", "youtubeIcon");
