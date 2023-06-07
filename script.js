@@ -126,12 +126,12 @@ const createCard = (number) => {
   card.appendChild(youtubeSpotifyDiv);
   const youtubeIcon = document.createElement("img");
   youtubeIcon.setAttribute("class", "youtubeIcon");
-  youtubeIcon.src = "./imgs/youtube-icon.png";
+  youtubeIcon.src = "imgs/youtubeicon.png";
   youtubeSpotifyDiv.appendChild(youtubeIcon);
   const spotifyIcon = document.createElement("img"); 
   spotifyIcon.setAttribute("class", "spotifyIcon");
 
-  spotifyIcon.src = "/imgs/spotify-icon.png";
+  spotifyIcon.src = "imgs/spotifyicon.png";
   youtubeSpotifyDiv.appendChild(spotifyIcon);
   youtubeIcon.addEventListener("click", () => {
     window.open(collection[number].youtubeLink);
