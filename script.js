@@ -84,6 +84,41 @@ const collection = [
     spotifyLink:
       "https://open.spotify.com/track/2ARw4obh0Ym3sVvdYtuFw0?si=1043dbeaa73047fa",
   },
+  {
+    name: "Forrest Gump",
+    director: "Robert Zemeckis",
+    releaseYear: 1994,
+    picture: "https://ntvb.tmsimg.com/assets/p15829_v_h8_aw.jpg?w=1280&h=720",
+    genre: ["Drama", "Romance"],
+    cast: ["Tom Hanks", "Robin Wright", "Gary Sinise", "Sally Field"],
+    youtubeLink: "https://www.youtube.com/watch?v=uPIEn0M8su0",
+    spotifyLink:
+      "https://open.spotify.com/track/2BpTHqyPPdjPN6PNB5Vc69?si=e771a08a0cee40d2",
+  },
+  {
+    name: "Schindler's List",
+    director: "Steven Spielberg",
+    releaseYear: 1993,
+    picture:
+      "https://static.timesofisrael.com/www/uploads/2015/07/neeson-schindlers-list-1024x640.jpg",
+    genre: ["Drama", "History"],
+    cast: ["Liam Neeson", "Ralph Fiennes", "Ben Kingsley", "Caroline Goodall"],
+    youtubeLink: "https://www.youtube.com/watch?v=JdRGC-w9syA",
+    spotifyLink:
+      "https://open.spotify.com/track/42gZM6AQ9BDMaTyTmMDVlN?si=d412ac9dc52442f3",
+  },
+  {
+    name: "The Lord of the Rings: The Return of the King",
+    director: "Peter Jackson",
+    releaseYear: 2003,
+    picture:
+      "https://deadline.com/wp-content/uploads/2022/08/lord-of-the-rings-feature-image.jpg?w=1000",
+    genre: ["Adventure", "Drama"],
+    cast: ["Elijah Wood", "Viggo Mortensen", "Ian McKellen", "Orlando Bloom"],
+    youtubeLink: "https://www.youtube.com/watch?v=r5X-hFf6Bwo",
+    spotifyLink:
+      "https://open.spotify.com/track/6ANHfvTsKVUMQD1xD2VAMr?si=5d88142c381441ab",
+  },
 ];
 
 const createCard = (number) => {
@@ -170,23 +205,21 @@ search.addEventListener("keyup", (e) => {
 
     if (searchString === "") {
       section.innerHTML = "";
-      createCard(0);
-      createCard(1);
-      createCard(2);
-      createCard(3);
-      createCard(4);
-      createCard(1);
-      createCard(3);
-      createCard(4);
+      collection.forEach((movie) => {
+        createCard(collection.indexOf(movie));
+      });
     }
   });
 });
 
-createCard(0);
-createCard(1);
-createCard(2);
-createCard(3);
-createCard(4);
-createCard(1);
-createCard(3);
-createCard(4);
+// createCard(0);
+// createCard(1);
+// createCard(2);
+// createCard(3);
+// createCard(4);
+// createCard(1);
+// createCard(3);
+// createCard(4);
+collection.forEach((movie) => {
+  createCard(collection.indexOf(movie));
+});
