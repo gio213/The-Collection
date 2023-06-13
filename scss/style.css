@@ -104,11 +104,11 @@ body header .posterImgDiv {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 5px solid #dbe9ff;
   transition: all 0.5s ease-in-out;
 }
 body header .posterImgDiv:hover {
   transform: scale(1.1);
+  border: 5px solid #dbe9ff;
 }
 body header img {
   width: 100%;

@@ -4,6 +4,8 @@ const section = document.querySelector("section");
 const themeSwitcher = document.querySelector(".themeSwitcher");
 const themeSwitchBtn = document.getElementById("themeChanger");
 const themeName = document.querySelector(".colorChangeBtnTxt h1");
+const createCardBtn = document.querySelector(".createCardBtn");
+
 const setTheme = (theme) => (document.documentElement.className = theme);
 themeSwitchBtn.addEventListener("change", function () {
   if (themeSwitchBtn.checked) {
@@ -128,7 +130,7 @@ const createCard = (number) => {
   youtubeIcon.setAttribute("class", "youtubeIcon");
   youtubeIcon.src = "imgs/youtubeicon.png";
   youtubeSpotifyDiv.appendChild(youtubeIcon);
-  const spotifyIcon = document.createElement("img"); 
+  const spotifyIcon = document.createElement("img");
   spotifyIcon.setAttribute("class", "spotifyIcon");
 
   spotifyIcon.src = "imgs/spotifyicon.png";
