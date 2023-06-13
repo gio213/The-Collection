@@ -108,16 +108,16 @@ const collection = [
       "https://open.spotify.com/track/42gZM6AQ9BDMaTyTmMDVlN?si=d412ac9dc52442f3",
   },
   {
-    name: "The Lord of the Rings: The Return of the King",
-    director: "Peter Jackson",
-    releaseYear: 2003,
+    name: "Once Upon a Time in America",
+    director: "Sergio Leone",
+    releaseYear: 1984,
     picture:
-      "https://deadline.com/wp-content/uploads/2022/08/lord-of-the-rings-feature-image.jpg?w=1000",
-    genre: ["Adventure", "Drama"],
-    cast: ["Elijah Wood", "Viggo Mortensen", "Ian McKellen", "Orlando Bloom"],
-    youtubeLink: "https://www.youtube.com/watch?v=r5X-hFf6Bwo",
+      "https://hips.hearstapps.com/hmg-prod/images/once-upon-a-time-in-america-1530579166.jpg",
+    genre: ["Crime", "Drama"],
+    cast: ["Robert De Niro", "James Woods", "Elizabeth McGovern", "Joe Pesci"],
+    youtubeLink: "https://www.youtube.com/watch?v=lFw062jAYR0",
     spotifyLink:
-      "https://open.spotify.com/track/6ANHfvTsKVUMQD1xD2VAMr?si=5d88142c381441ab",
+      "https://open.spotify.com/track/6k4oyh9h8EibXJSDkEi6AB?si=4a3de89f6813420a",
   },
 ];
 
