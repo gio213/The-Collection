@@ -125,7 +125,7 @@ body section {
 }
 body section .card {
   width: 20%;
-  height: 500px;
+  height: 450 px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
